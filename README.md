@@ -1,4 +1,4 @@
-# I gave an AI one rule: prove everything. The proof ate the project.
+# I told Codex to prove everything. And the proof ate the project.
 
 *Fifteen days of an AI building unattended, audited from the outside by a second AI (different model) — and still going.*
 
