@@ -98,6 +98,8 @@ Over the next twenty minutes it killed two more concepts. One it rejected becaus
 
 Three concepts dead within twenty-two minutes of that second message. The persona file lands on disk at the eighteen-minute mark; the concept itself doesn't lock until 00:14, half an hour in. The files survive in the repo, but **none of that sequence — the timestamps, the kills, the order — exists in git.** It exists only because the transcripts do.
 
+![The first 32 minutes — prompt to locked concept, three ideas invented and killed on the way](first-hour.png)
+
 ## What it's building
 
 [**Countershape**](https://github.com/nelsonwerd/countershape). When several AI agents write the same feature, you get branches that compile and pass tests while quietly disagreeing about things nobody specified — authorization semantics, config precedence, error behavior.
@@ -161,6 +163,8 @@ The recorder has no undo button. Verbatim from the run's own execution contract:
 No resume, no checkpoint, no partial credit. didrun 0.1.0 offers no primitive that would let a repaired tree inherit events 0–74 and continue at 75.
 
 Meanwhile the proof obligation sets the chain length, and the chain lengths are long. One unit required **80 commands** — 17 gates and profiles, 54 isolated qualification cases each deliberately getting its own event and its own claim, plus cumulative passes. That per-case isolation is excellent evidence design, and it's exactly what makes the chain long enough to be fragile. That unit took **eight launches to land one clean run** — roughly 48 hours of attempt time inside a single 54.4-hour commit gap. The five ledger-bearing failures burned about **33 hours** between them, a mean of 6.69 each; the pass that finally sealed took 14 hours 40 minutes on its own. (The other two launches died without leaving evidence at all — one lost its terminal session before recording anything, one was scrapped during launch preparation six minutes in.)
+
+![One unit, eight launches — five failures at commands 23, 78, 80, 75 and 79, two launches that left no evidence, and the eighth sealing 80/80](c4-eight-launches.png)
 
 The failures land late by construction. Four of the five came at command 75 or later — 78, 80, 75, 79 out of 80, with one early outlier at 23 — because the expensive integrative checks (the cumulative passes, the staged-scope gate, the credential scan, the preseal ledger gate) all sit at the end. **330 successful, immediately-claimed events were discarded to keep 80**: a 4.1-to-1 waste ratio.
 
@@ -237,6 +241,8 @@ As a set of rules, it never left. The persona document was touched by **exactly 
 And the rules outlived the voice. Rule 3 — *"Separate producer from judge. An agent may propose a patch or probe; it may not grade its own correctness"* — is dead as language and alive as policy: every parallel agent in this run is read-only, and the verification shortcut the agent built and then refused itself — the story is in the next section — is that rule turned on its own authority. The question the persona was given — *"what new fact does this system create, and who is allowed to interpret it as truth?"* — is the shape of every status document that followed.
 
 So the persona was a decision instrument for choosing what to build, and a dead file for building it — **except that the rules it wrote in the first hour governed everything after.** Of everything in this repository, it is the one document that has never changed.
+
+![66 commits, one file never moved — session-handoff file touched 56 times, unit schema 29, persona doctrine once](persona-file.png)
 
 ## What held up
 
