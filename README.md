@@ -18,7 +18,9 @@ Last month I ran the skills pipeline on Fable 5 the week it came out, and it pro
 
 To be clear… this is NOT a controlled experiment and I'm not pretending it is. I have no formal training and this is me just getting into the weeds with the models, building upon and testing what I find interesting. The idea was to test the pipeline alongside didrun on 5.6 not to just see what codex could do… but really to test out my pipeline and tools, so I could further improve the output of long autonomous runs. The one rule that mattered: no claim counts unless a recording backs it.
 
-**I expected it to take a day.. maybe two.** Every previous run of mine (I've built many small prototypes with it) finished inside one. It's been **FIFTEEN** days and it's got about a month left.
+**I expected it to take a day.. maybe two.** Every previous run of mine (I've built many small prototypes with it) finished inside one. It's been **FIFTEEN** days (as of writing this… July 29) and it's got about a month left.
+
+And no… the run is not lost, and it is not hallucinating. it has stayed coherent the entire time… the repo rejects anything that breaks its own rules, and it has followed my rules faithfully. arguably TOO faithfully, which turns out to be the actual finding. the fails it keeps hitting are bugs in my tooling, and surfacing those was the whole point of the run… v0.2 of didrun and updates to the skills have already shipped from what it exposed.
 
 The 15 days has only been possible because OpenAI reset limits about a billion times this month…. Speaking of billions, this run has used a whopping **8.2 billion tokens** (cached and uncached), and I haven't paid a dime past the subscription. Without the resets, this wouldn't be possible.
 
@@ -242,7 +244,7 @@ And the rules outlived the voice. Rule 3 — *"Separate producer from judge. An 
 
 So the persona was a decision instrument for choosing what to build, and a dead file for building it — **except that the rules it wrote in the first hour governed everything after.** Of everything in this repository, it is the one document that has never changed.
 
-![66 commits, one file never moved — session-handoff file touched 56 times, unit schema 29, persona doctrine once](persona-file.png)
+![66 commits, one file never moved — every sealed commit as a tick; the persona doctrine's single first-hour tick, then silence](persona-file.png)
 
 ## What held up
 
